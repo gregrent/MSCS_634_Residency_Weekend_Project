@@ -1,13 +1,13 @@
 # Advanced Data Mining for Data-Driven Insights and Predictive Modeling
 ## Deliverable 2: Regression Modeling and Performance Evaluation
 
---
+---
 
 ## 📌 Project Overview
 
 This deliverable focuses on building regression models to predict a target variable using the cleaned Titanic dataset prepared in Deliverable 1. The objective is to apply feature engineering, train multiple regression models, and evaluate their performance using standard regression metrics and cross-validation techniques.
 
---
+---
 
 ## 📊 Dataset Summary
 
@@ -32,7 +32,7 @@ This deliverable focuses on building regression models to predict a target varia
 - Duplicate records removed.
 - Dataset inspected for inconsistent or unrealistic values.
 
---
+---
 
 ## 🛠 Feature Engineering
 
@@ -50,7 +50,7 @@ Converted categorical variables (Sex and Embarked) into numeric form.
 
 These features were designed to capture social and travel-related patterns that may influence fare.
 
---
+---
 
 ## 🤖 Regression Models Implemented
 
@@ -64,6 +64,8 @@ Two regression models were developed and compared:
 - Regularized version of linear regression.
 - Helps prevent overfitting by penalizing large coefficients.
 
+---
+
 ## 📏 Model Evaluation Metrics
 
 Models were evaluated using:
@@ -75,7 +77,7 @@ Models were evaluated using:
 - 5-fold cross-validation was used to evaluate model generalization.
 - Ensured performance consistency across multiple training splits.
 
---
+---
 
 ## 📊 Key Observations and Insights
 - Both models performed similarly in terms of R² and RMSE.
@@ -83,6 +85,8 @@ Models were evaluated using:
 - Passenger class (Pclass) was the strongest predictor of fare.
 - Engineered features such as FamilySize contributed to improved model performance.
 - Cross-validation confirmed that the models generalize reasonably well to unseen data.
+
+---
 
 ## ⚠️ Challenges Encountered and Solutions
 ### Challenge 1: Handling Missing Data
@@ -101,11 +105,17 @@ Models were evaluated using:
 - Warnings appeared due to chained assignment with inplace=True.
 - **Solution:** Replaced with direct assignment to ensure future compatibility.
 
+---
+
 ## 📁 Repository Contents (for this deliverable)
 
 - `MSCS_634_ProjectDeliverable_2.ipynb` – Regression models and evaluation
 - `README.md` – Project summary, modeling process, insights, and challenges
 
+---
+
 ## ✅ Conclusion
 
 In this deliverable, regression models were successfully developed to predict passenger fare using engineered features from the Titanic dataset. Both Linear and Ridge Regression models showed comparable performance, with Ridge Regression offering more stable results due to regularization. Feature engineering played an important role in improving predictive performance, and cross-validation confirmed that the models generalize effectively. These results provide a solid foundation for more advanced predictive modeling in future deliverables.
+
+---
