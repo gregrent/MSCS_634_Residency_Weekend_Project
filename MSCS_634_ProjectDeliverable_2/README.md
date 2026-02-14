@@ -26,9 +26,9 @@ This deliverable focuses on building regression models to predict a target varia
 - Engineered features: FamilySize, IsAlone
 
 ### Dataset Preparation (from Deliverable 1):
-- Missing Age values filled using the median.
-- Missing Embarked values filled using the mode.
-- Cabin column removed due to excessive missing values.
+- Missing **Age** values filled using the median.
+- Missing **Embarked** values filled using the mode.
+- **Cabin** column removed due to excessive missing values.
 - Duplicate records removed.
 - Dataset inspected for inconsistent or unrealistic values.
 
@@ -40,12 +40,11 @@ To improve model performance, the following features were created:
 
 ### 1. One-Hot Encoding
 
-Converted categorical variables (Sex and Embarked) into numeric form.
+Converted categorical variables (**Sex** and **Embarked**) into numeric form.
 
 ### 2. New Derived Features
 
 - **FamilySize:** Total number of family members aboard.
-
 - **IsAlone:** Binary indicator of whether a passenger was traveling alone.
 
 These features were designed to capture social and travel-related patterns that may influence fare.
@@ -69,9 +68,9 @@ Two regression models were developed and compared:
 ## 📏 Model Evaluation Metrics
 
 Models were evaluated using:
-- R² (Coefficient of Determination): Measures how well the model explains variance.
-- Mean Squared Error (MSE): Average squared difference between predicted and actual values.
-- Root Mean Squared Error (RMSE): Square root of MSE for interpretability.
+- **R² (Coefficient of Determination):** Measures how well the model explains variance.
+- **Mean Squared Error (MSE):** Average squared difference between predicted and actual values.
+- **Root Mean Squared Error (RMSE):** Square root of MSE for interpretability.
 
 ### Cross-Validation
 - 5-fold cross-validation was used to evaluate model generalization.
@@ -80,15 +79,17 @@ Models were evaluated using:
 ---
 
 ## 📊 Key Observations and Insights
+
 - Both models performed similarly in terms of R² and RMSE.
 - Ridge Regression produced slightly more stable results due to regularization.
-- Passenger class (Pclass) was the strongest predictor of fare.
-- Engineered features such as FamilySize contributed to improved model performance.
+- Passenger class (**Pclass**) was the strongest predictor of fare.
+- Engineered features such as **FamilySize** contributed to improved model performance.
 - Cross-validation confirmed that the models generalize reasonably well to unseen data.
 
 ---
 
 ## ⚠️ Challenges Encountered and Solutions
+
 ### Challenge 1: Handling Missing Data
 - The dataset contained missing values in key attributes.
 - **Solution:** Applied median and mode imputation to preserve data distribution.
@@ -102,7 +103,7 @@ Models were evaluated using:
 - **Solution:** Implemented Ridge Regression with regularization and used cross-validation.
 
 ### Challenge 4: Pandas Future Warnings
-- Warnings appeared due to chained assignment with inplace=True.
+- Warnings appeared due to chained assignment with `inplace=True`.
 - **Solution:** Replaced with direct assignment to ensure future compatibility.
 
 ---
